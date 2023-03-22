@@ -32,13 +32,29 @@ namespace StackAndQueueProblem
             Node temp = this.head;
             if (temp == null)
             {
-                Console.WriteLine("Linked list queue is empty");
+                Console.WriteLine("Queue is empty");
                 return;
             }
             while (temp != null)
             {
                 Console.Write(temp.data + "  ");
                 temp = temp.next;
+            }
+        }
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty,Deletion is not possible");
+                return;
+            }
+            else
+            {
+                while (this.head != null)
+                {
+                    Console.WriteLine("Value Dequeued is {0}",this.head.data);
+                    this.head = this.head.next;
+                }
             }
         }
     }

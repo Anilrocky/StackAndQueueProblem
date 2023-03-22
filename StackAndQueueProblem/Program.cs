@@ -30,7 +30,7 @@ namespace StackAndQueueProblem
                         bool flag1 = true;
                         while (flag1)
                         {
-                            Console.WriteLine("\nChoose option to perform \n1.Create queue \n2.Display \n3.Exit");
+                            Console.WriteLine("\nChoose option to perform \n1.Create queue \n2.Display \n3.Dequeue elements \n4.Exit");
                             int a = Convert.ToInt32(Console.ReadLine());
                             switch (a)
                             {
@@ -41,8 +41,11 @@ namespace StackAndQueueProblem
                                     break;
                                 case 2:
                                     queue.Display();
-                                    break;                              
+                                    break;
                                 case 3:
+                                    queue.Dequeue();
+                                    break;
+                                case 4:
                                     flag1 = false;
                                     break;
                             }

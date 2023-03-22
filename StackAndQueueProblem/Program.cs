@@ -9,7 +9,7 @@ namespace StackAndQueueProblem
             LinkedListStack stack = new LinkedListStack();
             while (flag)
             {
-                Console.WriteLine("\nChoose option to perform \n1.Push elements to Stack \n2.Display \n3.Exit");
+                Console.WriteLine("\nChoose option to perform \n1.Push elements to Stack \n2.Display \n3.Peek and Pop elements \n4.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -22,6 +22,10 @@ namespace StackAndQueueProblem
                         stack.Display();
                         break;
                     case 3:
+                        stack.Peek();
+                        stack.Pop();
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
